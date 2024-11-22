@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Вариант 11</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <h1>
+            <span class = "star">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M19.2 0H12.8V8.27451L6.94904 2.42355L2.42355 6.94902L8.27453 12.8H0V19.2H8.27451L2.42355 25.0509L6.94904 29.5765L12.8 23.7254V32H19.2V23.7254L25.051 29.5765L29.5765 25.051L23.7254 19.2H32V12.8H23.7254L29.5765 6.94902L25.051 2.42354L19.2 8.27451V0Z" fill="#0D1421"/>
+                </svg>
+            </span>
+             Вариант 11</h1>
+        <button class="user-icon"><svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M11.85 11.282C13.0253 10.6477 13.9555 9.63943 14.493 8.41683C15.0306 7.19423 15.1449 5.82722 14.8178 4.53233C14.4907 3.23744 13.7409 2.0887 12.6872 1.26807C11.6335 0.447438 10.3361 0.00183105 9.0005 0.00183105C7.66493 0.00183105 6.36755 0.447438 5.31384 1.26807C4.26013 2.0887 3.51034 3.23744 3.18324 4.53233C2.85613 5.82722 2.97041 7.19423 3.50798 8.41683C4.04555 9.63943 4.97566 10.6477 6.151 11.282C2.962 11.867 0 13.23 0 14V18H18V14C18 13.23 15.038 11.868 11.85 11.282ZM13 6.00002C13 7.06088 12.5786 8.0783 11.8284 8.82844C11.0783 9.57859 10.0609 10 9 10C7.93913 10 6.92172 9.57859 6.17157 8.82844C5.42143 8.0783 5 7.06088 5 6.00002C5 4.93915 5.42143 3.92173 6.17157 3.17159C6.92172 2.42144 7.93913 2.00002 9 2.00002C10.0609 2.00002 11.0783 2.42144 11.8284 3.17159C12.5786 3.92173 13 4.93915 13 6.00002ZM16 14.748V16H2V14.748C2.377 14.53 2.947 14.268 3.673 14.008C5.269 13.438 7.287 13 9 13C10.713 13 12.73 13.438 14.327 14.009C15.053 14.268 15.623 14.53 16 14.749V14.748Z" fill="#0D1421"/>
+            </svg>
+            </i></button>
+    </header>
+    
+    <main>
+        <div class="header-container">
+            <h2>Ваши задачи</h2>
+            <div class="sort-dropdowns">
+                <select>
+                    <option value="default">По умолчанию</option>
+                    <option value="option1">Истекают раньше</option>
+                    <option value="option2">Истекают позже</option>
+                </select>
+                <div class="color-dropdown" onclick="toggleColorOptions()">
+                    <span>Сортировка по цвету</span>
+                    <div class="color-options" id="color-options">
+                        <label class="color-checkbox">
+                            <input type="checkbox" value="blue">
+                            <span class="color-box" style="background-color: #338fff;"></span>
+                        </label>
+                        <label class="color-checkbox">
+                            <input type="checkbox" value="green">
+                            <span class="color-box" style="background-color: #5dc470;"></span>
+                        </label>
+                        <label class="color-checkbox">
+                            <input type="checkbox" value="red">
+                            <span class="color-box" style="background-color: #d45a5a;"></span>
+                        </label>
+                        <label class="color-checkbox">
+                            <input type="checkbox" value="purple">
+                            <span class="color-box" style="background-color: #c97bf0;"></span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tasks-container">
+            <div class="task">
+                <div class="color-box" style="background-color: #338fff;"></div>
+                <h3>Название первой задачи</h3>
+                <p>Описание задачи</p>
+                <p><strong>Истекает:</strong> 16 июля 2025 года</p>
+                <p><strong>Ответственный:</strong> Соколов Роман</p>
+            </div>
+            <div class="task">
+                <div class="color-box" style="background-color: #5dc470;"></div>
+                <h3>Название второй задачи</h3>
+                <p>Описание задачи</p>
+                <p><strong>Истекает:</strong> 1 августа 2025 года</p>
+                <p><strong>Ответственный:</strong> Соколов Роман</p>
+            </div>
+            <div class="task">
+                <div class="color-box" style="background-color: #d45a5a;"></div>
+                <h3>Название третьей задачи</h3>
+                <p>Описание задачи</p>
+                <p><strong>Истекает:</strong> 15 сентября 2025 года</p>
+                <p><strong>Ответственный:</strong> Соколов Роман</p>
+            </div>
+            <div class="task">
+                <div class="color-box" style="background-color: #c97bf0;"></div>
+                <h3>Название четвертой задачи</h3>
+                <p>Описание задачи</p>
+                <p><strong>Истекает:</strong> 30 ноября 2025 года</p>
+                <p><strong>Ответственный:</strong> Соколов Роман</p>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>© Вариант 11. Соколов Роман, группа ПИ-22-2</p>
+    </footer>
+
+    <script>
+        function toggleColorOptions() {
+            const colorOptions = document.getElementById("color-options");
+            colorOptions.style.display = colorOptions.style.display === "flex" ? "none" : "flex";
+        }
+        document.addEventListener("DOMContentLoaded", function() {
+            const colorOptions = document.getElementById("color-options");
+            colorOptions.style.display = "none";
+        });
+    </script>
+</body>
+</html>
